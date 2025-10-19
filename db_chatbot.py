@@ -5,7 +5,6 @@ from google import genai
 import psycopg2
 load_dotenv()
 
-client = genai.Client()
 
 
 def getSql(client : genai.Client, question, chat_history):

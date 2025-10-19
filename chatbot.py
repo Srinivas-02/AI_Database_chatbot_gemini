@@ -1,6 +1,9 @@
+import os
+from dotenv import load_dotenv
 from db_chatbot import getValuefromDB,getSql,getNLPAnswer
-from google import genai
-client = genai.Client()
+from google import genai    
+load_dotenv()
+client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
 global history
 history = []
 def addtohistory(role,message):
